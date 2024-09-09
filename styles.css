@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #282c34;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.happy-birthday {
+    font-size: 3em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.balloons {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: #ff6347;
+    border-radius: 50% 50% 40% 40%;
+    bottom: 0;
+    animation: float 5s infinite;
+}
+
+.balloon1 {
+    background-color: #ff4500;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    background-color: #32cd32;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.balloon3 {
+    background-color: #1e90ff;
+    left: 80%;
+    animation-delay: 4s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
+}
+
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ff0000, transparent);
+    border-radius: 50%;
+    animation: fireworkAnimation 1s ease-out;
+}
+
+@keyframes fireworkAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    border-radius: 50%;
+    animation: confettiAnimation 3s ease-in-out forwards;
+}
+
+@keyframes confettiAnimation {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
